@@ -15,16 +15,16 @@ def test_initialize_library():
 
     def test_borrow_when_available(self):
         book1 = Book("Data Analysis", "Dr. Anil Maheshwari")
-        available = book.borrow()
+        available = book1.borrow()
         self.assertTrue(available is True)
-        self.assertFalse(book.available)
+        self.assertFalse(book1.available)
 
     def test_borrow_when_not_available(self):
         book2 = Book("Project Managment", "Harold Kerzner")
         book.borrow()
-        available = book.borrow()
+        available = book2.borrow()
         self.assertFalse(available is False)
-        self.assertFalse(book.available)
+        self.assertFalse(book2.available)
 
     def test_return_book(self):
         book = Book("Python", "Eric Matthes")
